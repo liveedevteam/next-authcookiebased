@@ -2,6 +2,9 @@
 
 A Next.js app with **cookie-based authentication**: Login and Profile pages, mock email/password auth, and protected routes using an HTTP-only cookie.
 
+## DEMO
+URL: https://next-authcookiebased.vercel.app
+
 ## Description
 
 This project demonstrates **cookie-based session auth** in the App Router. The server sets an HTTP-only cookie (`auth-token`) on successful login; the browser stores it automatically and sends it with every request. Middleware reads the cookie to protect `/profile` and redirect unauthenticated users to `/login`. The Profile page calls GET `/api/profile` (which also reads the cookie) to show the current user. No token is stored in `localStorage` or in client-side state—only in the cookie, so it is not exposed to JavaScript and is sent only to the same origin.
